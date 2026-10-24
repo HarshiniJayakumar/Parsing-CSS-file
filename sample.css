@@ -1,0 +1,34 @@
+:root {
+    --main-color: #3498db;
+    --padding-size: 16px;
+}
+
+.profile {
+    color: blue;
+    color: red;        /* Duplicate property issue */
+    padding 10px;      /* Syntax error: missing colon */
+    margin: 12px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid black !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@supports (display: grid) {
+    .grid-container {
+        display: grid;
+        gap: var(--padding-size);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        border: 2px solid var(--main-color);
+    }
+}
